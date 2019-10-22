@@ -23,10 +23,7 @@ public class MyGame extends ApplicationAdapter {
 		cam.setToOrtho(false, width, height);
 		position = new Vector2(width/20,height - width/20);
 		renderer = new ShapeRenderer();
-
 	}
-
-
 
 	@Override
 	public void render () {
@@ -42,12 +39,10 @@ public class MyGame extends ApplicationAdapter {
 		}else if (position.y >= height -width/20 && position.x >= width/20){
 			position.x -= 10;
 		}
-
 		renderer.begin(ShapeRenderer.ShapeType.Filled);
 		renderer.setColor(Color.RED);
 		renderer.circle(position.x, position.y, width/20);
 		renderer.end();
-
 	}
 	
 	@Override
