@@ -2,5 +2,8 @@
 <resources>
 
     <string name="app_name">Simple1</string>
+    <string name="newTag">Test Tag</string>
+    <string name="bnOk">OK</string>
+    <string name="tvInform">Information</string>
 
 </resources>
