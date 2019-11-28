@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="ic_background_color">#FFFFFFFF</color>
+
+    <color name="base5_start">#87e6f5</color>
+    <color name="base5">#00BEDC</color>
+    <color name="base5_dark">#038da3</color>
 </resources>

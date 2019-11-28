@@ -2,7 +2,10 @@ package com.haanhgs.game;
 
 import android.os.Bundle;
 import com.badlogic.gdx.backends.android.AndroidFragmentApplication;
+
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 
 public class AndroidLauncher extends FragmentActivity implements AndroidFragmentApplication.Callbacks {
 	@Override
@@ -10,10 +13,15 @@ public class AndroidLauncher extends FragmentActivity implements AndroidFragment
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		Test test = new Test();
-		getSupportFragmentManager().beginTransaction()
-				.replace(R.id.flMain, test)
-				.commit();
+		Fragment fragment = getSupportFragmentManager().findFragmentByTag("menu");
+		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+		if (fragment == null){
+			FragmentMenu menu = new FragmentMenu();
+			ft.replace(R.id.flMain, menu, "menu");
+			ft.commit();
+		}else {
+			ft.attach(fragment);
+		}
 	}
 
 	@Override
