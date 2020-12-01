@@ -2,7 +2,6 @@ package com.haanhgs.game;
 
 import android.os.Bundle;
 import com.badlogic.gdx.backends.android.AndroidFragmentApplication;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
